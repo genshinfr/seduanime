@@ -1,0 +1,280 @@
+/* =========== © 2016 Centroarts.com =========== */
+
+/* Сброс */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; font-size: 100%; font: inherit; vertical-align: baseline } article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block } body { line-height: 1 } ol, ul { list-style: none } blockquote, q { quotes: none } blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none } table { border-collapse: collapse; border-spacing: 0 }
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary { display: block; }
+
+html { height: 100%; min-height: 100%; }
+body { min-height: 100%; }
+html, html a { -webkit-font-smoothing: antialiased; }
+
+/* Настройка основной типографии */
+body, select, input, textarea, button {
+	font: normal 14px/1.5 Arial, Helvetica, sans-serif;
+	color: #353535;
+	outline: none;
+}
+	a { 
+		outline: none;
+		color: #3394e6;
+		text-decoration: none;
+	}
+	a:hover { text-decoration: underline; }
+
+	a img { border: 0 none; }
+	a > img { vertical-align: bottom; }
+
+/* Заголовки H1-6 */
+h1,h2,h3,h4,h5,.h1,.h2,.h3,.h4,.h5 {
+	margin: 2em 0 .6em 0;
+	letter-spacing: -0.01em;
+	line-height: normal;
+	font-weight: bold;
+	text-rendering: optimizeLegibility;
+}
+h1, .h1 { font-size: 23px; }
+h2, .h2 { font-size: 21px; }
+h3, .h3 { font-size: 20px; }
+h4, .h4 { font-size: 18px; }
+h5, .h5 { font-size: 16px; }
+
+/* Частые стили */
+.strike { text-decoration: line-through; }
+.nobr { white-space: nowrap; }
+.hide { display: none; }
+.title_hide { left: -9999px; position: absolute; top: -9999px; overflow: hidden; width: 0; height: 0; }
+.uline { text-decoration: underline; }
+.strike { text-decoration: line-through; }
+.justify { text-align: justify; }
+.center { text-align: center; }
+.left { float: left; }
+.right { float: right; }
+	fieldset { border: 1px solid rgba(0,0,0,0.1); padding: 20px; margin-bottom: 25px; }
+	fieldset legend { font-weight: bold; }
+
+.grey { color: #919191; }
+.grey a { color: inherit; }
+.grey a:hover { color: #353535; }
+.blue { color: #3394e6; }
+.orange { color: #e85319; }
+
+sup { vertical-align: super; font-size: smaller; }
+sub { vertical-align: sub; font-size: smaller; } 
+.over { display: inline-block; vertical-align: middle; max-width: 100%; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+a .over { cursor: pointer; }
+
+/* Настройка других элементов */
+ul { padding-left: 25px; list-style: disc outside; }
+ol { padding-left: 25px; list-style: decimal outside; }
+
+	strong, b { font-weight: bold }
+	em, cite, i { font-style: italic }
+	caption { text-align: left }
+	th, td { vertical-align: middle }
+	small, .small { font-size: .9em; }
+	hr { height: 0; border: 0; border-top: 2px solid #eeeeef; -moz-box-sizing: content-box; box-sizing: content-box; margin: 20px 0; }
+
+	.clr { clear: both }
+	.clrfix:after { clear: both; content: ""; display: table; }
+
+/* --- Layout --- */
+body { background: #ededed; }
+
+/* --- Новости --- */
+.box {
+	background-color: #fff;
+	margin-bottom: 25px;
+	border-radius: 2px;
+	position: relative;
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2); -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
+}
+	.box > .heading { padding: 4% 8%; margin: 0; text-transform: uppercase; }
+	.box > .heading .hnum { font-size: .6em; display: inline-block; vertical-align: top; margin: 0 0 0 .4em; }
+	.box_in { padding: 4% 8%; }
+
+	.story .title { margin: -.1em 0 1em 0; font-size: 20px; }
+	.story .title > a {
+		color: inherit;
+		text-decoration: none !important;
+		-webkit-transition: all ease .2s; transition: all ease .2s;
+	}
+	.story .title > a:hover { color: #3394e6; }
+
+	/* Иконки управления новостью слева */
+	.story_icons {
+		position: absolute;
+		top: 0; left: 0;
+		width: 8%;
+		list-style: none;
+		padding: 4% 0 0 0; margin: -.2em 0 0 0;
+	}
+	.fixed_story .story_icons { z-index: 1; }
+	.story_icons > li { text-align: center; margin: 0 0 10px 0; }
+
+	.story .box_in > .text { font-size: 1.08em; }
+	.story .box_in > .text:after { content: ""; display: block; clear: both; }
+	.story .box_in > .text > img[style*="left"], .story .box_in > .text > .highslide img[style*="left"] { margin: 2px 4% 4% 0; }
+	.story .box_in > .text > img[style*="right"], .story .box_in > .text > .highslide img[style*="right"] { margin: 2px 0 4% 4%; }
+	.story .box_in > .text img { max-width: 100%; }
+
+	/* Нижняя часть новости */
+	.story_tools { margin-top: 4%; }
+		.story_tools > .category { float: right; margin-top: .7em; font-size: .9em; }
+		.story_tools > .category .icon { width: 12px; height: 15px; margin: -.2em .4em 0 0; }
+		.story_tools > .btn { float: left; margin-right: 2em; }
+
+	.story > .meta { font-size: .9em; background-color: #f7f7f7; padding: 2% 8%; border-radius: 0 0 2px 2px; }
+		.meta:after, .story_tools:after { clear: both; display: table; content: ""; }
+		.meta > ul { list-style: none; padding: 0; margin: 0; }
+		.meta > ul > li { display: inline; }
+		.meta > ul.left > li { margin-right: 2em; }
+		.meta > ul.right > li { margin-left: 2em; }
+		.meta .icon-views { height: 18px; }
+
+/*--- Цитаты, Спойлеры, Код  ---*/
+.scriptcode, .title_quote,
+	.title_spoiler, .text_spoiler { padding: 2% 4%; background: #fff; border: 1px solid #dde4ea; }
+
+	.title_quote { margin-top: 2px; font-weight: bold; }
+	.quote, blockquote { padding: 1% 4%; margin: 1em 0; border-left: 2px solid #e85319; font-family: Georgia, serif; font-style: italic; font-size: 1.2em; }
+	.title_spoiler { margin-top: 2px; }
+	.text_spoiler { margin-bottom: 2px; }
+	.title_spoiler img { vertical-align: middle; margin: -1px 0 0 !important }
+	.scriptcode { color: #4c6d0f; text-align: left; font-family: "Courier New" }
+	.title_spoiler { font-weight: normal; }
+	.text_spoiler { border-top: 0; text-align: justify; }
+
+	.hide { background-color: #f0f0f0; padding: 5px; color: #4c6d0f; margin: 0 0 1em 0 }
+	.hide a { text-decoration: underline; } .hide a:hover { text-decoration: none }
+
+
+/* --- Настройка кнопок --- */
+.btn, .bbcodes, .ui-button, .btn-border {
+	border: 0 none;
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+	height: 36px;
+	border-radius: 18px;
+	line-height: 22px;
+	outline: none;
+	background-color: #3394e6;
+	color: #fff;
+	border: 0 none;
+	padding: 7px 22px;
+	text-decoration: none !important;
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2); -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	-webkit-transition: all ease .1s; transition: all ease .1s;
+}
+	.btn > .icon { fill: #fff; }
+	.btn-white > .icon { fill: #3394e6; }
+	.btn-white { background-color: #fff; color: #3394e6; }
+		.btn-white:hover > .icon { fill: #fff; }
+		.btn-white:hover { background-color: #3394e6; color: #fff; }
+	.btn:hover, .bbcodes:hover, .ui-button:hover { background-color: #46a6f6; }
+
+	.btn-big { height: 46px; padding: 12px 27px; border-radius: 23px; }
+
+	.btn-border {
+		color: #3394e6;
+		border: 2px solid #3394e6;
+		line-height: 22px;
+		padding: 5px 20px;
+		background-color: transparent !important;
+		overflow: hidden;
+		box-shadow: inset 0 0 0 0 transparent; -webkit-box-shadow: inset 0 0 0 0 transparent;
+	}
+	.btn-border:hover {
+		box-shadow: inset 0 0 0 2px rgba(51,148,230,0.2); -webkit-box-shadow: inset 0 0 0 2px rgba(51,148,230,0.2);
+	}
+
+/*---Смайлы---*/
+.emoji {
+    border: none;
+    vertical-align: middle;
+    width: 22px;
+    height: 22px;
+}
+
+/*---показ оригинальной картинки загруженной на сайт из уменьшенной копии---*/
+.xfieldimagegallery {
+  margin: 0;
+  padding: 0;  
+  list-style: none;
+  clear: both;
+}
+
+.xfieldimagegallery li {
+	list-style: none;
+	margin: 0;
+	padding: 0;  
+}
+
+.xfieldimagegallery li img {
+  float: left;
+  margin-right: 5px;
+  border: 5px solid #fff;
+  width: 100px;
+  height: 100px;
+  transition: box-shadow 0.5s ease;
+}
+
+.xfieldimagegallery li img:hover {
+  box-shadow: 0px 0px 7px rgba(0,0,0,0.4);
+}
+
+.highslide-wrapper, .highslide-outline { background: #fff }
+	.highslide-image { border: 2px solid #fff }
+	.highslide-active-anchor { visibility: hidden } 
+	.highslide-active-anchor img { visibility: hidden }
+	.highslide-dimming { background-color: black }
+	.highslide-html { background-color: white }
+	.highslide-loading { display: block; color: white; font-size: 9px; font-weight: bold; text-decoration: none; padding: 3px; border: 1px solid white; background-color: black }
+	a.highslide-full-expand { background: url(../dleimages/fullexpand.gif) no-repeat; display: block; margin: 0 10px 10px 0; width: 34px; height: 34px }
+	.highslide-display-block { display: block }
+	.highslide-display-none { display: none }
+	.highslide-caption { display: none; padding: 5px; background: white }
+	.highslide-controls { width: 195px; height: 40px; background: url(../../../engine/classes/highslide/graphics/controlbar-black-border.gif) no-repeat 0 -90px; margin-right: 15px; margin-bottom: 10px; margin-top: 10px }
+	.highslide-controls ul { position: relative; left: 15px; height: 40px; list-style: none; margin: 0; padding: 0; background: url(../../../engine/classes/highslide/graphics/controlbar-black-border.gif) no-repeat 100% -90px }
+	.highslide-controls li { float: left; padding: 5px 0; }
+	.highslide-controls a { background: url(../../../engine/classes/highslide/graphics/controlbar-black-border.gif); display: block; float: left; height: 30px; width: 30px; outline: none }
+	.highslide-controls a.disabled { cursor: default }
+	.highslide-controls a span { display: none }
+ 
+/*---The CSS sprites for the controlbar---*/
+.highslide-controls .highslide-previous a { background-position: 0 0 }
+	.highslide-controls .highslide-previous a:hover { background-position: 0 -30px }
+	.highslide-controls .highslide-previous a.disabled { background-position: 0 -60px !important }
+	.highslide-controls .highslide-play a { background-position: -30px 0 }
+	.highslide-controls .highslide-play a:hover { background-position: -30px -30px }
+	.highslide-controls .highslide-play a.disabled { background-position: -30px -60px !important }
+	.highslide-controls .highslide-pause a { background-position: -60px 0 }
+	.highslide-controls .highslide-pause a:hover { background-position: -60px -30px }
+	.highslide-controls .highslide-next a { background-position: -90px 0 }
+	.highslide-controls .highslide-next a:hover { background-position: -90px -30px }
+	.highslide-controls .highslide-next a.disabled { background-position: -90px -60px !important }
+	.highslide-controls .highslide-move a { background-position: -120px 0 }
+	.highslide-controls .highslide-move a:hover { background-position: -120px -30px }
+	.highslide-controls .highslide-full-expand a { background-position: -150px 0 }
+	.highslide-controls .highslide-full-expand a:hover { background-position: -150px -30px }
+	.highslide-controls .highslide-full-expand a.disabled { background-position: -150px -60px !important }
+	.highslide-controls .highslide-close a { background-position: -180px 0 }
+	.highslide-controls .highslide-close a:hover { background-position: -180px -30px }
+
+/*---Подсветка кода в теге [code]---*/
+pre code { display: block; padding: 0.5em; background: #f9fafa; border: 1px solid #dce7e7; overflow:auto; white-space: pre; }
+	pre .comment, pre .template_comment, pre .diff .header, pre .doctype, pre .lisp .string, pre .javadoc { padding: 0; margin: 0; border:none; box-shadow: none; background-color: inherit; color: #93a1a1; font-style: italic; }
+	pre .keyword, pre .css .rule .keyword, pre .winutils, pre .javascript .title, pre .method, pre .addition, pre .css .tag, pre .lisp .title { color: #859900; }
+	pre .number, pre .command, pre .string, pre .tag .value, pre .phpdoc, pre .tex .formula, pre .regexp, pre .hexcolor { color: #2aa198; }
+	pre .title, pre .localvars, pre .function .title, pre .chunk, pre .decorator,
+	pre .builtin, pre .built_in, pre .lisp .title, pre .identifier, pre .title .keymethods, pre .id { color: #268bd2; }
+	pre .tag .title, pre .rules .property, pre .django .tag .keyword { font-weight: bold;font-size: 1.08em !important;  }
+	pre .attribute, pre .variable, pre .instancevar, pre .lisp .body, pre .smalltalk .number, pre .constant, pre .class .title,
+	pre .parent, pre .haskell .label { color: #b58900; }
+	pre .preprocessor, pre .pi, pre .shebang, pre .symbol,
+	pre .diff .change, pre .special, pre .keymethods, pre .attr_selector, pre .important, pre .subst, pre .cdata { color: #cb4b16; }
+	pre .deletion { color: #dc322f; }
+	pre .tex .formula { background: #eee8d5; }
+	pre .comment:hover {background-color: inherit;box-shadow: none;}
+
